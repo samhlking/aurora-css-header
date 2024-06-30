@@ -1,0 +1,56 @@
+body {
+  margin: 0;
+  background-color: white;
+  font-family: Arial, sans-serif;
+}
+
+.header {
+  position: relative;
+  height: 20vw;
+  min-height: 500px;
+  background-image: url('https://samuel-king.com/wp-content/uploads/2024/06/Samuel-King-bg-header-1.png');
+  background-size: cover;
+  background-position: center;
+  overflow: hidden;
+}
+
+.aurora-effect {
+  position: absolute;
+  z-index: 0;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  mix-blend-mode: lighten;
+  background: linear-gradient(90deg,#5fff2a, #2e38ff, #fd0d0d, #5fff2a);
+  background-size: 400% 400%;
+  animation: aurora-animation 18s ease infinite;
+}
+
+@keyframes aurora-animation {
+  0% {
+    background-position: 0 50%;
+    -webkit-backdrop-filter: saturate(2) hue-rotate(0);
+    backdrop-filter: saturate(2) hue-rotate(0);
+  }
+  25% {
+    background-position: 10% 50%;
+    -webkit-backdrop-filter: saturate(2) hue-rotate(90deg);
+    backdrop-filter: saturate(2) hue-rotate(90deg);
+  }
+  50% {
+    background-position: 90% 2%;
+    -webkit-backdrop-filter: saturate(1.5) hue-rotate(-0.05turn);
+    backdrop-filter: saturate(1.5) hue-rotate(-0.05turn);
+  }
+  75% {
+    background-position: 15% 55%;
+    -webkit-backdrop-filter: saturate(1.5) hue-rotate(-0.25turn);
+    backdrop-filter: saturate(1.5) hue-rotate(100deg);
+  }
+  100% {
+    background-position: 0 50%;
+    -webkit-backdrop-filter: saturate(2) hue-rotate(0);
+    backdrop-filter: saturate(2) hue-rotate(0);
+  }
+}
